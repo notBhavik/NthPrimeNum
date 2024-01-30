@@ -1,0 +1,54 @@
+package P1;
+import java.util.*;
+public class PrimeNum {
+	
+	public static void main(String [] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		int p=sc.nextInt();
+		p=p+p+1;
+		PrimeNum ref=new PrimeNum();
+		int c=0;
+		int i=2;
+		while(true) {
+			 
+		if(ref.primeNum(i)){
+			c++;
+			if(c==p) {
+				System.out.println(c+" nth prime number is "+i);
+				break;
+			}
+		}
+		i++;
+		 
+		}
+		 
+	}
+	
+	public boolean primeNum(int a ) {
+		 int i;
+		int count=0;
+		 
+		for(i=2;i<a;i++) {
+			if(a%i==0) {
+				count++;
+				break;
+			}
+					
+		
+		}
+		
+		if(count==0) {
+			
+			return true;
+			 
+		}
+		else {
+					return false;
+		}
+		
+		 
+		
+	}
+
+}
